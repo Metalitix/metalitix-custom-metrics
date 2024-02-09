@@ -4,11 +4,14 @@ Metalitix™ is a powerful platform-agnostic software providing comprehensive 3D
 
 This repository houses scripts from the community for collecting custom metrics in spatial experiences.
 
-# Helpful Links
+## Helpful Links
 * **Metalitix:** https://metalitix.com
 * **Metalitix Documentation:** https://docs.metalitix.com
 * **Metalitix Supported Platforms:** https://docs.metalitix.com/supported-platforms
 * **Metalitix Custom Metrics:** https://docs.metalitix.com/advanced-features/custom-metrics
+
+&nbsp;
+---
 
 # MetalitixClickListener
 
@@ -41,6 +44,9 @@ Records session click events to a Metalitix chart.
 </body>
 ```
 
+&nbsp;
+---
+
 # MetalitixLookListener
 
 When a session starts, record a value of false to the Metalitix chart. When the session looks at the object, change this value to true.
@@ -70,6 +76,9 @@ When a session starts, record a value of false to the Metalitix chart. When the 
   </a-scene>
 </body>
 ```
+
+&nbsp;
+---
 
 # MetalitixLookTimer
 
