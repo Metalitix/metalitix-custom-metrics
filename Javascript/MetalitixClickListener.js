@@ -25,11 +25,13 @@ if (typeof AFRAME !== 'undefined') {
   AFRAME.registerComponent('metalitix-click-listener', {
     init: function () {
       const loggerComponent = document.querySelector('a-scene').components['metalitix-logger']
-      if (loggerComponent && loggerComponent.logger) {
-      addMetalitixClickListener(loggerComponent.logger)
-      } else {
+
+      if(!(loggerComponent) || !(loggerComponent.logger)) {
         console.warn('[MetalitixClickListener] No metalitix-logger component found on the a-scene! Click events will not be recorded to Metalitix.')
+        return
       }
+
+      addMetalitixClickListener(loggerComponent.logger)
     }
   })
 }
