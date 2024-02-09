@@ -7,7 +7,7 @@ function addMetalitixLookTimer(logger, scene, camera, aframe=false) {
     raycaster.setFromCamera(new THREE.Vector2(0, 0), camera)
     const intersects = raycaster.intersectObjects(scene.children, true)
     const firstIntersectedObject = (aframe) ? intersects[0]?.object?.parent?.parent : intersects[0]?.object
-    const firstIntersectedObjectName = firstIntersectedObject?.userData.mtxLookName
+    const firstIntersectedObjectName = firstIntersectedObject?.userData.mtxTimerName
 
     const currentTime = Date.now()
     const timeLooked = currentTime - lookStartTime
@@ -42,8 +42,8 @@ if (typeof AFRAME !== 'undefined') {
         return
       }
 
-      sceneEl.querySelectorAll('[mtx-look-name]').forEach(el => {
-        el.object3D.userData.mtxLookName = el.getAttribute('mtx-look-name')
+      sceneEl.querySelectorAll('[mtx-timer-name]').forEach(el => {
+        el.object3D.userData.mtxTimerName = el.getAttribute('mtx-timer-name')
       })
       addMetalitixLookTimer(loggerComponent.logger, sceneEl.object3D, sceneEl.camera, true)
     }
